@@ -34,6 +34,7 @@ def request_number():
         intv = int(number)
         if intv > 100000000 or intv < -1000000000:
             continue
-        if neva: inv = -inv
+        if neva:
+            intv = -intv
         return intv
 
