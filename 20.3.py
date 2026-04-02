@@ -13,11 +13,15 @@ def logout(simplenumbs):
         print(numb)
 
 
-def intofile(simplenumbs, filnam):
-    with open(filnam, "w") as f:
+def intofile(simplenumbs, filename):
+    with open(filename, "w") as f:
         for numb in simplenumbs:
             f.write(str(numb) + "\n")
 
+def readfromfile(filename, numbersfromfile):
+    with open(filename, "r") as p:
+        for line in p:
+            numbersfromfile.append(int(line.strip()))
 
 if __name__ == '__main__':
     simplenumbs=[3, 5, 7, 11, 13]
@@ -26,9 +30,13 @@ if __name__ == '__main__':
         if issimple(num, simplenumbs):
             simplenumbs.append(num)
     logout(simplenumbs)
-    intofile(simplenumbs, "C:\\Users\\Liana\\Desktop\\nmbss.txt")
-
-
-
+    myfilename = "C:\\Users\\Liana\\Desktop\\nmbss.txt"
+    intofile(simplenumbs, myfilename)
+    test = []
+    readfromfile(myfilename, test)
+    if test == simplenumbs:
+        print("good read")
+    else:
+        print("bad read")
 
 
