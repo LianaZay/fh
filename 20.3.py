@@ -38,5 +38,3 @@ if __name__ == '__main__':
         print("good read")
     else:
         print("bad read")
-
-
