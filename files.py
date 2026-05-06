@@ -17,10 +17,8 @@ def countfiles(path):
                 print("folder name is inaccessible: ", fullname)
     return amo
 
-
 if __name__ == '__main__':
     print("Liana")
     result = countfiles("C:\\")
 
     print("result is ", result)
-
