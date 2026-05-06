@@ -7,11 +7,9 @@ def issimple(number, simplenumbs):
             break
     return True
 
-
 def logout(simplenumbs):
     for numb in simplenumbs:
         print(numb)
-
 
 def intofile(simplenumbs, filename):
     with open(filename, "w") as f:
